@@ -1,0 +1,1 @@
+import{buildCircuit as e}from"../hfg/track-model.js";import{Vehicle as t}from"../hfg/vehicle.js";import{modelData as o}from"./panels.js";export function computeModel(){const r=e(),m=o(new t);return delete m.flSweep.states,delete m.D,{circuit:r,data:m}}

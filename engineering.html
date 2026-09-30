@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Engineering — HFG</title>
+<meta name="description" content="How HFG calculates: a true 3-D mechanism solve, instant centres from point velocities, traceable equations, stated limits and verification benchmarks.">
+<link rel="canonical" href="https://hfg.foo.ng/engineering.html">
+<meta name="theme-color" content="#050609">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HFG">
+<meta property="og:title" content="Engineering — HFG">
+<meta property="og:description" content="How HFG calculates: a true 3-D mechanism solve, instant centres from point velocities, traceable equations, stated limits and verification benchmarks.">
+<meta property="og:url" content="https://hfg.foo.ng/engineering.html">
+<meta property="og:image" content="https://hfg.foo.ng/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Engineer the car before it touches the track — HFG’s single-seater demonstrator in the studio.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Engineer the car before it touches the track — HFG’s single-seater demonstrator in the studio.">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plexmono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/hfg.css">
+
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">HFG<i>.</i></span>
+      <span class="brand__tag">Vehicle engineering</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="product.html" data-nav="product">Product</a>
+      <a href="engineering.html" data-nav="engineering" aria-current="page">Engineering</a>
+      <a href="education.html" data-nav="education">Education</a>
+      <a href="licensing.html" data-nav="licensing">Licensing</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+      <a class="btn btn--primary" href="contact.html?interest=quotation#enquiry">Request a quotation</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span aria-hidden="true"></span></button>
+    <a class="menu-link" href="#footer-nav">Menu</a>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu__top">
+    <a class="brand" href="index.html"><span class="brand__mark">HFG<i>.</i></span></a>
+    <button class="menu__close" type="button" aria-label="Close menu">×</button>
+  </div>
+  <nav aria-label="Menu">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="product.html" data-nav="product">Product</a>
+    <a href="engineering.html" data-nav="engineering" aria-current="page">Engineering</a>
+    <a href="education.html" data-nav="education">Education</a>
+    <a href="licensing.html" data-nav="licensing">Licensing</a>
+    <a href="contact.html" data-nav="contact">Contact</a>
+  </nav>
+  <div class="btn-row">
+    <a class="btn btn--primary" href="contact.html?interest=quotation#enquiry">Request a quotation <span class="arrow" aria-hidden="true">→</span></a>
+    <a class="btn" href="contact.html?interest=evaluation#enquiry">Ask about evaluation</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="h-page">
+    <div class="wrap">
+      <p class="index"><b>Engineering</b> · Why trust a number</p>
+      <h1 class="h1" id="h-page">Every number can be traced to where it came from.</h1>
+      <p class="lead">This page is for the engineer deciding whether HFG's results can be defended: how the mechanism is solved, how one output is traced end to end, what is deliberately not modelled, what has been verified, and how validation will be published.</p>
+      <div class="page-hero__meta"><a class="chip" href="#method">Method</a><a class="chip" href="#traceability">Traceability</a><a class="chip" href="#equations">Open Equations</a><a class="chip" href="#limits">Limits</a><a class="chip" href="#validation">Verification and validation</a></div>
+    </div>
+  </section>
+
+  <section class="section" id="method" aria-labelledby="h-method">
+    <div class="wrap">
+      <div class="head">
+        <p class="index"><b>01</b> · Method</p>
+        <h2 class="h2" id="h-method">Solved in three dimensions. Measured, never typed.</h2>
+      </div>
+      <div class="cols cols--2">
+        <div>
+          <p class="label label--accent">The mechanism</p>
+          <p class="cell-title">One degree of freedom, solved directly.</p>
+          <p class="cell-body">With the rack fixed, a double-wishbone corner has one degree of freedom. HFG solves the minimal system — the two wishbone rotations about their actual chassis axes and the upright's spin about the ball-joint axis — against three conditions: the upright is rigid, the tie rod keeps its length, and a drive condition pins the position.</p>
+          <p class="cell-body">Because wishbones rotate about their real pivot axes, anti-dive built into the side view and castor built into the plan view are exact, not a planar approximation. The pushrod and bell crank are solved afterwards: they are driven by the mechanism, not part of it.</p>
+        </div>
+        <div>
+          <p class="label label--accent">The measurements</p>
+          <p class="cell-title">Outputs of the mechanism.</p>
+          <p class="cell-body">There is no input box for motion ratio, roll-centre height, camber gain or anti-dive. Design inputs — spring rate, bar diameter, link length — are stored; results are measured off the solved geometry every time.</p>
+          <p class="cell-body">Instant centres come from the velocities of the ball joints, which stays correct for canted pivot axes where extending the wishbone lines does not. A centre at infinity is reported as infinity, not as a large number.</p>
+        </div>
+        <div>
+          <p class="label label--accent">Sweeps</p>
+          <p class="cell-title">Continuation through travel.</p>
+          <p class="cell-body">A sweep solves the corner station by station, each starting from its neighbour's solution, so the solver stays on the physical branch of the mechanism. Rates such as camber gain, bump steer and motion ratio are derivatives of the swept, exact geometry.</p>
+        </div>
+        <div>
+          <p class="label label--accent">Strength</p>
+          <p class="cell-title">Calculated member strength.</p>
+          <p class="cell-body">Loads are traced through the suspension members and checked for stress and yield, buckling and rod-end or joint rating. This is analytical engineering calculation, not finite-element analysis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--0" id="traceability" aria-labelledby="h-trace">
+    <div class="wrap">
+      <div class="head head--split">
+        <div>
+          <p class="index"><b>02</b> · Traceability</p>
+          <h2 class="h2" id="h-trace">One number, followed from hardpoint to handling.</h2>
+        </div>
+        <p class="body">A worked trace on HFG's example F1000 geometry, calculated when this site is built, by the same solver port the homepage runs. Inputs are marked; every other value is derived from the row above it.</p>
+      </div>
+      <section class="table-wrap" tabindex="0" aria-label="Worked trace, front corner">
+        <table class="table">
+          <caption>Front corner of the example vehicle at static ride height. Inputs: spring 100 N/mm, 500 kg, 44 % front, 12 kg unsprung per corner, CG 300 mm.</caption>
+          <thead><tr><th scope="col">Step</th><th scope="col">Quantity</th><th scope="col">Relationship</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Geometry</th><td>Hardpoints</td><td>Input — the corner's hardpoints</td><td class="num">table below</td></tr>
+            <tr><th scope="row">Solve</th><td>Static camber · castor · KPI</td><td>Measured off the solved wheel and steering axes</td><td class="num"><span data-v="tr-camber">−2.00</span>° · <span data-v="tr-castor">5.19</span>° · <span data-v="tr-kpi">6.48</span>°</td></tr>
+            <tr><th scope="row">Solve</th><td>Scrub radius · mechanical trail</td><td>Steering axis meets the ground</td><td class="num"><span data-v="tr-scrub">29.7</span> · <span data-v="tr-trail">17.3</span> mm</td></tr>
+            <tr><th scope="row">Measure</th><td>Motion ratio</td><td class="mono">MR = d(damper) / d(wheel)</td><td class="num" data-v="tr-mr">0.462</td></tr>
+            <tr><th scope="row">Input</th><td>Spring rate</td><td>Stored design input</td><td class="num"><span data-v="tr-ks">100</span> N/mm</td></tr>
+            <tr><th scope="row">Stiffen</th><td>Wheel rate</td><td class="mono">K<sub>w</sub> = K<sub>s</sub> · MR²</td><td class="num"><span data-v="tr-kw">21.3</span> N/mm</td></tr>
+            <tr><th scope="row">Stiffen</th><td>Ride frequency</td><td class="mono">f = √(K<sub>w</sub> / m) / 2π, m = <span data-v="tr-m">98</span> kg</td><td class="num"><span data-v="tr-f">2.35</span> Hz</td></tr>
+            <tr><th scope="row">Stiffen</th><td>Front roll stiffness, springs</td><td class="mono">K<sub>φ</sub> = K<sub>w</sub> · t² / 2, t = <span data-v="tr-track">1568</span> mm</td><td class="num"><span data-v="tr-kphi">457</span> N·m/°</td></tr>
+            <tr><th scope="row">Vehicle</th><td>Front share of roll stiffness</td><td>Against the rear axle's <span data-v="tr-kphir">450</span> N·m/°</td><td class="num"><span data-v="tr-share">50.4</span> %</td></tr>
+            <tr><th scope="row">Vehicle</th><td>Roll centres, front · rear</td><td>Contact patch → front-view instant centre, both sides</td><td class="num"><span data-v="tr-rcf">75.7</span> · <span data-v="tr-rcr">92.4</span> mm</td></tr>
+            <tr><th scope="row">Vehicle</th><td>Roll gradient</td><td>Sprung mass × roll-arm ÷ total roll stiffness</td><td class="num"><span data-v="tr-grad">1.05</span> °/g</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <details class="faq" style="margin-top: 1.5rem"><summary>The inputs: front-left hardpoints of the example vehicle</summary><div>
+        <section class="table-wrap" tabindex="0" aria-label="Hardpoints, front left corner"><table class="table" data-hardpoints><caption>HFG vehicle frame: +X forward, +Y left, +Z up, millimetres from the front-axle centreline at the ground. From HFG's F1000 preset.</caption><thead><tr><th scope="col">Hardpoint</th><th scope="col" class="num">X</th><th scope="col" class="num">Y</th><th scope="col" class="num">Z</th></tr></thead><tbody><tr><th scope="row">Upper wishbone, front pivot</th><td class="num">110.0</td><td class="num">430.0</td><td class="num">275.0</td></tr><tr><th scope="row">Upper wishbone, rear pivot</th><td class="num">−130.0</td><td class="num">430.0</td><td class="num">255.0</td></tr><tr><th scope="row">Lower wishbone, front pivot</th><td class="num">120.0</td><td class="num">290.0</td><td class="num">105.0</td></tr><tr><th scope="row">Lower wishbone, rear pivot</th><td class="num">−140.0</td><td class="num">290.0</td><td class="num">115.0</td></tr><tr><th scope="row">Upper ball joint</th><td class="num">−14.0</td><td class="num">715.0</td><td class="num">345.0</td></tr><tr><th scope="row">Lower ball joint</th><td class="num">6.0</td><td class="num">740.0</td><td class="num">125.0</td></tr><tr><th scope="row">Wheel centre</th><td class="num">0.0</td><td class="num">775.0</td><td class="num">254.0</td></tr><tr><th scope="row">Tie rod, inner</th><td class="num">−95.0</td><td class="num">315.0</td><td class="num">138.0</td></tr><tr><th scope="row">Tie rod, outer</th><td class="num">−95.0</td><td class="num">720.0</td><td class="num">165.0</td></tr><tr><th scope="row">Pushrod, lower</th><td class="num">0.0</td><td class="num">640.0</td><td class="num">145.0</td></tr><tr><th scope="row">Pushrod, upper</th><td class="num">65.0</td><td class="num">300.0</td><td class="num">400.0</td></tr><tr><th scope="row">Bell crank, pivot</th><td class="num">−30.0</td><td class="num">300.0</td><td class="num">400.0</td></tr><tr><th scope="row">Coilover, bell-crank end</th><td class="num">−30.0</td><td class="num">232.0</td><td class="num">451.0</td></tr><tr><th scope="row">Coilover, chassis end</th><td class="num">−295.0</td><td class="num">232.0</td><td class="num">451.0</td></tr></tbody></table></section>
+      </div></details>
+      <p class="small" style="margin-top: 1rem">In HFG, the chain continues: roll gradient and load transfer feed the dynamics channels, optimisation targets and track studies.</p>
+    </div>
+  </section>
+
+  <section class="section" id="equations" aria-labelledby="h-eq">
+    <div class="wrap">
+      <div class="head head--split">
+        <div>
+          <p class="index"><b>03</b> · Open Equations</p>
+          <h2 class="h2" id="h-eq">Not a black box.</h2>
+        </div>
+        <p class="body">The Open Equations Bar shows the relationship behind a calculated output: the equation, the variables it used and the assumptions that apply. Open means inspectable — HFG is not open-source software.</p>
+      </div>
+      <div class="cols cols--3">
+        <div><p class="label">Motion ratio</p><p class="mock__eq" style="margin-top: 1rem">MR = d(damper) / d(wheel)</p><p class="cell-body" style="margin-top: 0.9rem">Measured through the real linkage, so it changes with travel.</p></div>
+        <div><p class="label">Wheel rate</p><p class="mock__eq" style="margin-top: 1rem">K<sub>w</sub> = K<sub>s</sub> · <em>MR</em>²</p><p class="cell-body" style="margin-top: 0.9rem">The leading term; a rising-rate linkage adds its own stiffness through d(MR)/dz.</p></div>
+        <div><p class="label">Instant centre</p><p class="mock__eq" style="margin-top: 1rem">v<sub>IC</sub> = 0</p><p class="cell-body" style="margin-top: 0.9rem">Where the projected velocity of the upright vanishes — from ball-joint velocities.</p></div>
+        <div><p class="label">Camber</p><p class="mock__eq" style="margin-top: 1rem">γ = −asin(n<sub>z</sub>)</p><p class="cell-body" style="margin-top: 0.9rem">From the solved wheel spin axis, in three dimensions.</p></div>
+        <div><p class="label">Roll and pitch stiffness</p><p class="mock__eq" style="margin-top: 1rem">K(θ) = d²U / dθ²</p><p class="cell-body" style="margin-top: 0.9rem">From stored energy across the swept motion, so linkage non-linearity is included.</p></div>
+        <div><p class="label">Ride frequency</p><p class="mock__eq" style="margin-top: 1rem">f = √(K<sub>w</sub> / m) / 2π</p><p class="cell-body" style="margin-top: 0.9rem">How a target frequency becomes a spring rate, and back.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--2" id="limits" aria-labelledby="h-limits">
+    <div class="wrap split">
+      <div class="a stack">
+        <p class="index"><b>04</b> · Assumptions and limits</p>
+        <h2 class="h2" id="h-limits">What is deliberately not modelled.</h2>
+        <p class="body">Stated so nobody assumes otherwise. None of these is approximated with an invented number: a missing input is reported with the reason the analysis needs it.</p>
+      </div>
+      <ul class="b ticks ticks--muted">
+        <li>Compliance: links are rigid — no bushing rates, no chassis torsional stiffness, no deflection under load.</li>
+        <li>Gyroscopic effects of the rotating wheels and driveline.</li>
+        <li>Aerodynamic maps beyond a simple downforce and drag model.</li>
+        <li>Tyre transient behaviour: relaxation length, thermal state, wear.</li>
+        <li>Differential internals beyond the powertrain model.</li>
+        <li>Member strength is analytical, not finite-element analysis.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="validation" aria-labelledby="h-val">
+    <div class="wrap">
+      <div class="head head--split">
+        <div>
+          <p class="index"><b>05</b> · Verification and validation</p>
+          <h2 class="h2" id="h-val">What is verified, and what is not yet validated.</h2>
+        </div>
+        <p class="body">Two different questions, kept apart. Verification asks whether the software computes what it should. Validation asks whether what it computes matches a physical test. The first table below is verification only. The second is for validation, and it stays empty until there is test data to publish.</p>
+      </div>
+
+      <h3 class="h3" id="h-verification">Verification: benchmarks with exact answers</h3>
+      <p class="body" style="margin-top: 1rem">Three linkages simple enough to be solved exactly by plane geometry, each solved twice: once by the three-dimensional solver port these pages run, and once by that geometry, in code that shares nothing with the solver. The rows are calculated when this site is built, and a row outside its allowed difference stops the build. They are evidence that the solver solves its equations correctly. They say nothing about how a real car behaves.</p>
+      <div class="cols cols--3" style="margin-top: 2rem">
+        <div><p class="label label--accent">Benchmark A</p><p class="cell-title">Converging wishbones.</p><p class="cell-body">Both pivot axes are parallel to X, so the corner moves in one plane and its front view is a four-bar linkage. The wishbone lines meet 1500 mm inboard of the wheel centre and 100 mm above the ground, which makes the answers checkable by hand.</p></div>
+        <div><p class="label label--accent">Benchmark B</p><p class="cell-title">Equal, parallel wishbones.</p><p class="cell-body">A parallelogram. The upright cannot turn and the instant centre is at infinity: the case a solver must report as infinity, not as a very large number.</p></div>
+        <div><p class="label label--accent">Benchmark C</p><p class="cell-title">Inclined pivot axes.</p><p class="cell-body">Benchmark A pitched 5° about the axle line. The axes slope in side view, the ball joints no longer move in transverse planes and the wheel steers as it rises: a three-dimensional case that still has an exact answer.</p></div>
+      </div>
+      <section class="table-wrap" tabindex="0" aria-label="Verification benchmarks" style="margin-top: 1.5rem">
+        <table class="table" data-verification style="min-width: 70rem">
+          <caption>The solver port these pages run, against closed-form answers. Under each value: how it was obtained, the construction for the reference and the method for the solver. Differences are absolute. Camber is negative when the top of the wheel leans towards the car; toe-in is positive.</caption>
+          <colgroup><col style="width: 16%"><col style="width: 26%"><col style="width: 26%"><col style="width: 14%"><col style="width: 18%"></colgroup>
+          <thead><tr><th scope="col">Quantity</th><th scope="col">Reference</th><th scope="col">Solver port</th><th scope="col">Difference</th><th scope="col">Assumptions</th></tr></thead>
+          <tbody><tr data-row="a-camber"><th scope="row">A · Camber through ±30 mm of wheel travel</th><td><span class="num">−1.329605°&nbsp;at&nbsp;+30&nbsp;mm<br>0.968861°&nbsp;at&nbsp;−30&nbsp;mm</span><p class="small">Four-bar linkage in the front view: the upper ball joint is where the upper wishbone's circle meets the circle of upright length about the lower ball joint. The lower wishbone's angle at each travel is found by bisection.</p></td><td><span class="num">−1.329605°&nbsp;at&nbsp;+30&nbsp;mm<br>0.968861°&nbsp;at&nbsp;−30&nbsp;mm</span><p class="small">3-D solve at 25 stations, each started from its neighbour; camber read off the solved wheel axis.</p></td><td><span class="num">3&nbsp;×&nbsp;10<sup>−11</sup>&nbsp;°</span><p class="small">largest&nbsp;of&nbsp;25&nbsp;stations<br>allowed&nbsp;10<sup>−8</sup>&nbsp;°</p></td><td>Both wishbone axes parallel to X, so the motion is planar. Rigid links, no static camber or toe.</td></tr><tr data-row="a-toe"><th scope="row">A · Bump steer through ±30 mm</th><td><span class="num">0°&nbsp;at&nbsp;every&nbsp;station</span><p class="small">The tie rod repeats the lower wishbone in the front view, so the planar motion keeps its length without turning the wheel.</p></td><td><span class="num">1&nbsp;×&nbsp;10<sup>−10</sup>&nbsp;°&nbsp;at&nbsp;most</span><p class="small">Toe read off the solved wheel axis at the same 25 stations.</p></td><td><span class="num">1&nbsp;×&nbsp;10<sup>−10</sup>&nbsp;°</span><p class="small">largest&nbsp;of&nbsp;25&nbsp;stations<br>allowed&nbsp;10<sup>−8</sup>&nbsp;°</p></td><td>Tie rod: inner end on the lower wishbone's axis, outer end level with the lower ball joint. Rack fixed.</td></tr><tr data-row="a-centre"><th scope="row">A · Front-view instant centre at the design position</th><td><span class="num">(−750.0000,&nbsp;100.0000)&nbsp;mm</span><p class="small">Both wishbone lines, extended until they meet.</p></td><td><span class="num">(−750.0000,&nbsp;100.0000)&nbsp;mm</span><p class="small">Where the perpendiculars to the two ball joints' velocities meet; velocities by central difference over ±0.02 mm of travel.</p></td><td><span class="num">2&nbsp;×&nbsp;10<sup>−6</sup>&nbsp;mm</span><p class="small">distance&nbsp;between&nbsp;the&nbsp;two&nbsp;points<br>allowed&nbsp;10<sup>−2</sup>&nbsp;mm</p></td><td>Y from the centreline, Z from the ground.</td></tr><tr data-row="a-roll-centre"><th scope="row">A · Roll-centre height at the design position</th><td><span class="num">50.0000&nbsp;mm</span><p class="small">Line from the contact patch through the instant centre, read at the centreline: 100 × 750 ÷ 1500 mm.</p></td><td><span class="num">50.0000&nbsp;mm</span><p class="small">Both corners solved, the right one mirrored; the two contact patch → instant centre lines intersected.</p></td><td><span class="num">2&nbsp;×&nbsp;10<sup>−7</sup>&nbsp;mm</span><p class="small">allowed&nbsp;10<sup>−2</sup>&nbsp;mm</p></td><td>Symmetric axle, 1500 mm track. Thin wheel: the contact patch is the lowest point of the wheel.</td></tr><tr data-row="a-gain"><th scope="row">A · Camber gain at the design position</th><td><span class="num">−0.038197&nbsp;°/mm</span><p class="small">−1 ÷ FVSA, the front-view swing-arm length: 1500 mm from the wheel centre to the instant centre.</p></td><td><span class="num">−0.038197&nbsp;°/mm</span><p class="small">Central difference of the solved camber over ±0.1 mm of travel.</p></td><td><span class="num">9&nbsp;×&nbsp;10<sup>−10</sup>&nbsp;°/mm</span><p class="small">allowed&nbsp;10<sup>−7</sup>&nbsp;°/mm</p></td><td>Travel is measured at the wheel centre.</td></tr><tr data-row="b-camber"><th scope="row">B · Camber change through ±30 mm</th><td><span class="num">0°&nbsp;at&nbsp;every&nbsp;station</span><p class="small">A parallelogram: the upright is carried without turning.</p></td><td><span class="num">5&nbsp;×&nbsp;10<sup>−14</sup>&nbsp;°&nbsp;at&nbsp;most</span><p class="small">3-D solve at 25 stations; camber read off the solved wheel axis.</p></td><td><span class="num">5&nbsp;×&nbsp;10<sup>−14</sup>&nbsp;°</span><p class="small">largest&nbsp;of&nbsp;25&nbsp;stations<br>allowed&nbsp;10<sup>−8</sup>&nbsp;°</p></td><td>Wishbones equal in length, parallel, and level at the design position.</td></tr><tr data-row="b-centre"><th scope="row">B · Front-view instant centre</th><td><span class="num">At&nbsp;infinity</span><p class="small">Parallel wishbone lines never meet.</p></td><td><span class="num">At&nbsp;infinity</span><p class="small">The two velocity perpendiculars are parallel, and the solver reports no finite centre rather than a very large number.</p></td><td><span class="num">None</span><p class="small">both&nbsp;report&nbsp;no&nbsp;finite&nbsp;centre</p></td><td>Equal, parallel wishbones, as in the row above.</td></tr><tr data-row="c-camber"><th scope="row">C · Camber through ±30 mm, pivot axes inclined 5°</th><td><span class="num">−1.330324°&nbsp;at&nbsp;+30&nbsp;mm<br>0.968191°&nbsp;at&nbsp;−30&nbsp;mm</span><p class="small">The same four-bar solution in the pitched plane: camber = −asin(sin ψ · cos 5°), with ψ the upright's rotation at travel ÷ cos 5°.</p></td><td><span class="num">−1.330324°&nbsp;at&nbsp;+30&nbsp;mm<br>0.968191°&nbsp;at&nbsp;−30&nbsp;mm</span><p class="small">3-D solve at 25 stations, as for A.</p></td><td><span class="num">2&nbsp;×&nbsp;10<sup>−11</sup>&nbsp;°</span><p class="small">largest&nbsp;of&nbsp;25&nbsp;stations<br>allowed&nbsp;10<sup>−8</sup>&nbsp;°</p></td><td>Benchmark A pitched 5° about the axle line: both wishbone axes slope in side view and the ball joints no longer move in transverse planes.</td></tr><tr data-row="c-toe"><th scope="row">C · Bump steer through ±30 mm, pivot axes inclined 5°</th><td><span class="num">0.116409°&nbsp;at&nbsp;+30&nbsp;mm<br>−0.084714°&nbsp;at&nbsp;−30&nbsp;mm</span><p class="small">The same solution: toe = atan(tan ψ · sin 5°).</p></td><td><span class="num">0.116409°&nbsp;at&nbsp;+30&nbsp;mm<br>−0.084714°&nbsp;at&nbsp;−30&nbsp;mm</span><p class="small">Toe read off the solved wheel axis at the same 25 stations.</p></td><td><span class="num">1&nbsp;×&nbsp;10<sup>−10</sup>&nbsp;°</span><p class="small">largest&nbsp;of&nbsp;25&nbsp;stations<br>allowed&nbsp;10<sup>−8</sup>&nbsp;°</p></td><td>Toe-in positive. The tie rod is pitched with the rest of the corner.</td></tr><tr data-row="c-centre"><th scope="row">C · Front-view instant centre, pivot axes inclined 5°</th><td><span class="num">(−755.5025,&nbsp;98.6003)&nbsp;mm</span><p class="small">The upright turns about the pitched instant axis; each ball joint's velocity perpendicular passes through the point where that axis crosses the joint's own transverse plane.</p></td><td><span class="num">(−755.5025,&nbsp;98.6003)&nbsp;mm</span><p class="small">From the ball-joint velocities, as for A.</p></td><td><span class="num">2&nbsp;×&nbsp;10<sup>−6</sup>&nbsp;mm</span><p class="small">distance&nbsp;between&nbsp;the&nbsp;two&nbsp;points<br>allowed&nbsp;10<sup>−2</sup>&nbsp;mm</p></td><td>Once pitched, the ball joints are still 10.1 mm apart in X (castor), so the two perpendiculars are aimed at different points of the axis.</td></tr></tbody>
+        </table>
+      </section>
+      <details class="faq" style="margin-top: 1.5rem"><summary>The inputs: hardpoints of the three benchmarks</summary><div>
+        <section class="table-wrap" tabindex="0" aria-label="Benchmark hardpoints"><table class="table" data-benchmarks><caption>Left corner in HFG's vehicle frame: +X forward, +Y left, +Z up, millimetres from the axle centreline at the ground. Tyre radius 250 mm, no static camber or toe. C is A turned 5° about the Y axis through the wheel centre.</caption><thead><tr><th scope="col">Hardpoint</th><th scope="col" class="num">X</th><th scope="col" class="num">Y</th><th scope="col" class="num">Z</th></tr></thead><tbody><tr><th scope="row">A · Upper wishbone, front pivot</th><td class="num">125.000</td><td class="num">425.000</td><td class="num">335.000</td></tr><tr><th scope="row">A · Upper wishbone, rear pivot</th><td class="num">−125.000</td><td class="num">425.000</td><td class="num">335.000</td></tr><tr><th scope="row">A · Lower wishbone, front pivot</th><td class="num">125.000</td><td class="num">250.000</td><td class="num">140.000</td></tr><tr><th scope="row">A · Lower wishbone, rear pivot</th><td class="num">−125.000</td><td class="num">250.000</td><td class="num">140.000</td></tr><tr><th scope="row">A · Upper ball joint</th><td class="num">−15.000</td><td class="num">675.000</td><td class="num">385.000</td></tr><tr><th scope="row">A · Lower ball joint</th><td class="num">15.000</td><td class="num">700.000</td><td class="num">158.000</td></tr><tr><th scope="row">A · Wheel centre</th><td class="num">0.000</td><td class="num">750.000</td><td class="num">250.000</td></tr><tr><th scope="row">A · Tie rod, inner</th><td class="num">−100.000</td><td class="num">250.000</td><td class="num">140.000</td></tr><tr><th scope="row">A · Tie rod, outer</th><td class="num">−100.000</td><td class="num">700.000</td><td class="num">158.000</td></tr><tr><th scope="row">B · Upper wishbone, front pivot</th><td class="num">125.000</td><td class="num">250.000</td><td class="num">380.000</td></tr><tr><th scope="row">B · Upper wishbone, rear pivot</th><td class="num">−125.000</td><td class="num">250.000</td><td class="num">380.000</td></tr><tr><th scope="row">B · Lower wishbone, front pivot</th><td class="num">125.000</td><td class="num">250.000</td><td class="num">150.000</td></tr><tr><th scope="row">B · Lower wishbone, rear pivot</th><td class="num">−125.000</td><td class="num">250.000</td><td class="num">150.000</td></tr><tr><th scope="row">B · Upper ball joint</th><td class="num">−15.000</td><td class="num">700.000</td><td class="num">380.000</td></tr><tr><th scope="row">B · Lower ball joint</th><td class="num">15.000</td><td class="num">700.000</td><td class="num">150.000</td></tr><tr><th scope="row">B · Wheel centre</th><td class="num">0.000</td><td class="num">750.000</td><td class="num">250.000</td></tr><tr><th scope="row">B · Tie rod, inner</th><td class="num">−100.000</td><td class="num">250.000</td><td class="num">150.000</td></tr><tr><th scope="row">B · Tie rod, outer</th><td class="num">−100.000</td><td class="num">700.000</td><td class="num">150.000</td></tr><tr><th scope="row">C · Upper wishbone, front pivot</th><td class="num">131.933</td><td class="num">425.000</td><td class="num">323.782</td></tr><tr><th scope="row">C · Upper wishbone, rear pivot</th><td class="num">−117.116</td><td class="num">425.000</td><td class="num">345.571</td></tr><tr><th scope="row">C · Lower wishbone, front pivot</th><td class="num">114.937</td><td class="num">250.000</td><td class="num">129.524</td></tr><tr><th scope="row">C · Lower wishbone, rear pivot</th><td class="num">−134.111</td><td class="num">250.000</td><td class="num">151.313</td></tr><tr><th scope="row">C · Upper ball joint</th><td class="num">−3.177</td><td class="num">675.000</td><td class="num">385.794</td></tr><tr><th scope="row">C · Lower ball joint</th><td class="num">6.925</td><td class="num">700.000</td><td class="num">157.043</td></tr><tr><th scope="row">C · Wheel centre</th><td class="num">0.000</td><td class="num">750.000</td><td class="num">250.000</td></tr><tr><th scope="row">C · Tie rod, inner</th><td class="num">−109.207</td><td class="num">250.000</td><td class="num">149.134</td></tr><tr><th scope="row">C · Tie rod, outer</th><td class="num">−107.638</td><td class="num">700.000</td><td class="num">167.066</td></tr></tbody></table></section>
+      </div></details>
+      <div class="cols cols--2" style="margin-top: 2rem">
+        <div><p class="label label--accent">The application</p><p class="cell-title">Over 3,700 automated tests.</p><p class="cell-body">HFG's solvers run headless and are regression-tested: checks that the software computes what it is meant to compute. That is verification too. It is not evidence that a car behaves that way.</p></div>
+        <div><p class="label label--accent">This website</p><p class="cell-title">The demonstrator is tested too.</p><p class="cell-body">The browser port used on these pages is tested against the same invariants as HFG's own suite: alignment reads back exactly, rigid lengths are conserved, left and right agree to 10⁻¹², and every contact patch stays on the ground. The benchmarks above are part of this website's test suite.</p></div>
+      </div>
+
+      <h3 class="h3" id="h-cases" style="margin-top: clamp(3rem, 6vw, 5.5rem)">Validation: comparison with physical test data</h3>
+      <p class="body" style="margin-top: 1rem">Every case will state its reference source, the test conditions and the method, beside HFG's result, the difference and the assumptions. No cases are published yet: this table fills when correlation data exists, not before.</p>
+      <section class="table-wrap" tabindex="0" aria-label="Validation cases" style="margin-top: 1.5rem">
+        <table class="table" data-validation>
+          <thead><tr><th scope="col">Quantity</th><th scope="col">Reference source</th><th scope="col">Test conditions</th><th scope="col">Method</th><th scope="col">HFG result</th><th scope="col">Difference</th><th scope="col">Assumptions</th></tr></thead>
+          <tbody><tr class="empty"><td colspan="7">No validation cases published yet.</td></tr></tbody>
+        </table>
+      </section>
+    </div>
+  </section>
+
+  <section class="section cta-band" aria-labelledby="h-cta">
+    <div class="wrap">
+      <h2 class="h1" id="h-cta">Test it against your own numbers.</h2>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="contact.html?interest=evaluation#enquiry">Ask about an evaluation licence <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn" href="contact.html?interest=quotation#enquiry">Request a quotation</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid" id="footer-nav">
+      <div class="stack" style="--stack: 1rem">
+        <a class="brand" href="index.html"><span class="brand__mark">HFG<i>.</i></span></a>
+        <p class="small" style="max-width: 36ch">A Windows desktop application for vehicle development: one connected engineering model from suspension geometry to the track and the simulator.</p>
+        <p class="small">Annual licences for teams of 1 to 100 users.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="product.html">Overview</a></li>
+          <li><a href="product.html#workflow">The workflow</a></li>
+          <li><a href="product.html#capabilities">Capabilities</a></li>
+          <li><a href="product.html#formula-student">Formula Student</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Engineering</h2>
+        <ul>
+          <li><a href="engineering.html#method">Methodology</a></li>
+          <li><a href="engineering.html#traceability">Traceability</a></li>
+          <li><a href="engineering.html#equations">Open Equations</a></li>
+          <li><a href="engineering.html#validation">Verification and validation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Access</h2>
+        <ul>
+          <li><a href="licensing.html">Licensing</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="education.html#turnkey">Turnkey simulator system</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p class="small">© 2026 HFG. Open means inspectable — HFG is not open-source software.</p>
+      <p class="small">Assetto Corsa is a trademark of its respective owner.</p>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/site.js"></script>
+</body>
+</html>

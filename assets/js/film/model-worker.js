@@ -1,0 +1,1 @@
+import{computeModel as s}from"./model.js";self.onmessage=()=>self.postMessage(s());

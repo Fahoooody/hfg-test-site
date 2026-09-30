@@ -1,0 +1,1 @@
+export function fmt(t,n=1){if(null==t||!Number.isFinite(t))return"—";const e=(Math.abs(t)<.5*10**-n?0:t).toFixed(n);return"-"===e[0]?`−${e.slice(1)}`:e}export function fmtSigned(t,n=1){const e=fmt(t,n);return"—"===e||"−"===e[0]||0===Number(e)?e:`+${e}`}

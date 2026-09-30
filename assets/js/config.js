@@ -1,0 +1,1 @@
+export const CONFIG=Object.freeze({url:"https://hfg.foo.ng",email:"enquiries@hfg.example",contactMethod:"mailto",contactEndpoint:"",placeholder:!0});

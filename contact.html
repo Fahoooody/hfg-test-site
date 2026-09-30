@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — HFG</title>
+<meta name="description" content="Start a conversation about HFG: quotations, evaluation licences, Formula Student team licences, teaching licences and turnkey university simulator systems.">
+<link rel="canonical" href="https://hfg.foo.ng/contact.html">
+<meta name="theme-color" content="#050609">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HFG">
+<meta property="og:title" content="Contact — HFG">
+<meta property="og:description" content="Start a conversation about HFG: quotations, evaluation licences, Formula Student team licences, teaching licences and turnkey university simulator systems.">
+<meta property="og:url" content="https://hfg.foo.ng/contact.html">
+<meta property="og:image" content="https://hfg.foo.ng/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Engineer the car before it touches the track — HFG’s single-seater demonstrator in the studio.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Engineer the car before it touches the track — HFG’s single-seater demonstrator in the studio.">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plexmono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/hfg.css">
+
+<link rel="modulepreload" href="assets/js/pages/contact-lib.js">
+<link rel="modulepreload" href="assets/js/config.js">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">HFG<i>.</i></span>
+      <span class="brand__tag">Vehicle engineering</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="product.html" data-nav="product">Product</a>
+      <a href="engineering.html" data-nav="engineering">Engineering</a>
+      <a href="education.html" data-nav="education">Education</a>
+      <a href="licensing.html" data-nav="licensing">Licensing</a>
+      <a href="contact.html" data-nav="contact" aria-current="page">Contact</a>
+      <a class="btn btn--primary" href="contact.html?interest=quotation#enquiry">Request a quotation</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span aria-hidden="true"></span></button>
+    <a class="menu-link" href="#footer-nav">Menu</a>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu__top">
+    <a class="brand" href="index.html"><span class="brand__mark">HFG<i>.</i></span></a>
+    <button class="menu__close" type="button" aria-label="Close menu">×</button>
+  </div>
+  <nav aria-label="Menu">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="product.html" data-nav="product">Product</a>
+    <a href="engineering.html" data-nav="engineering">Engineering</a>
+    <a href="education.html" data-nav="education">Education</a>
+    <a href="licensing.html" data-nav="licensing">Licensing</a>
+    <a href="contact.html" data-nav="contact" aria-current="page">Contact</a>
+  </nav>
+  <div class="btn-row">
+    <a class="btn btn--primary" href="contact.html?interest=quotation#enquiry">Request a quotation <span class="arrow" aria-hidden="true">→</span></a>
+    <a class="btn" href="contact.html?interest=evaluation#enquiry">Ask about evaluation</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="h-page">
+    <div class="wrap">
+      <p class="index"><b>Contact</b></p>
+      <h1 class="h1" id="h-page">Start a conversation.</h1>
+      <p class="lead">Tell us who you are and what you need to engineer. We reply in writing — with a quotation, an evaluation licence, or the questions we need answered first.</p>
+    </div>
+  </section>
+
+  <section class="section" id="enquiry" aria-labelledby="h-form">
+    <div class="wrap split split--wide-b">
+      <div class="a stack">
+        <h2 class="h3" id="h-form">What happens next</h2>
+        <ol class="ticks">
+          <li>We read your enquiry and reply in writing.</li>
+          <li>If it helps, we arrange a time-limited evaluation licence.</li>
+          <li>You receive a quotation for your licence group, with terms stated.</li>
+        </ol>
+        <p class="small">Prefer email? Write to <a data-email href="mailto:enquiries@hfg.example">enquiries@hfg.example</a>.</p>
+      </div>
+      <div class="b">
+        <div id="form-status" class="notice" role="status" tabindex="-1" hidden></div>
+        <form class="form" id="enquiry-form" action="mailto:enquiries@hfg.example" method="post" enctype="text/plain">
+          <div class="field-row">
+            <div class="field">
+              <label for="f-name">Name<span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-error">
+              <p class="error" id="f-name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email<span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-error">
+              <p class="error" id="f-email-error" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-org">Organisation or team<span class="req" aria-hidden="true">*</span></label>
+            <input id="f-org" name="organisation" type="text" autocomplete="organization" required aria-describedby="f-org-hint f-org-error">
+            <p class="hint" id="f-org-hint">Company, university or team — or “Independent”.</p>
+            <p class="error" id="f-org-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-interest">What are you asking about?<span class="req" aria-hidden="true">*</span></label>
+            <select id="f-interest" name="interest" required aria-describedby="f-interest-error">
+              <option value="">Choose one</option>
+              <option value="single">Single User licence</option>
+              <option value="fs-team">Formula Student Team licence</option>
+              <option value="educational">Educational licence</option>
+              <option value="enterprise">Industrial/Enterprise licence</option>
+              <option value="turnkey">Turnkey university simulator system</option>
+              <option value="evaluation">Evaluation licence</option>
+              <option value="quotation">Not sure yet — general enquiry</option>
+            </select>
+            <p class="error" id="f-interest-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-message">Message<span class="req" aria-hidden="true">*</span></label>
+            <textarea id="f-message" name="message" required aria-describedby="f-message-hint f-message-error" maxlength="4000"></textarea>
+            <p class="hint" id="f-message-hint">What car, team or course, and what do you need to solve?</p>
+            <p class="error" id="f-message-error" hidden></p>
+          </div>
+          <div class="hp-field" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <div class="btn-row">
+            <button class="btn btn--primary" type="submit"><span data-label>Send enquiry</span> <span class="arrow" aria-hidden="true">→</span></button>
+          </div>
+          <p class="small" id="send-note">We use your details only to reply to this enquiry.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid" id="footer-nav">
+      <div class="stack" style="--stack: 1rem">
+        <a class="brand" href="index.html"><span class="brand__mark">HFG<i>.</i></span></a>
+        <p class="small" style="max-width: 36ch">A Windows desktop application for vehicle development: one connected engineering model from suspension geometry to the track and the simulator.</p>
+        <p class="small">Annual licences for teams of 1 to 100 users.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="product.html">Overview</a></li>
+          <li><a href="product.html#workflow">The workflow</a></li>
+          <li><a href="product.html#capabilities">Capabilities</a></li>
+          <li><a href="product.html#formula-student">Formula Student</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Engineering</h2>
+        <ul>
+          <li><a href="engineering.html#method">Methodology</a></li>
+          <li><a href="engineering.html#traceability">Traceability</a></li>
+          <li><a href="engineering.html#equations">Open Equations</a></li>
+          <li><a href="engineering.html#validation">Verification and validation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Access</h2>
+        <ul>
+          <li><a href="licensing.html">Licensing</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="education.html#turnkey">Turnkey simulator system</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p class="small">© 2026 HFG. Open means inspectable — HFG is not open-source software.</p>
+      <p class="small">Assetto Corsa is a trademark of its respective owner.</p>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/site.js"></script>
+<script type="module" src="assets/js/pages/contact.js"></script>
+</body>
+</html>
