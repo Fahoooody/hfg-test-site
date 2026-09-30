@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hfg.foo.ng/sitemap.xml
+Sitemap: https://fahoooody.github.io/hfg-test-site/sitemap.xml
