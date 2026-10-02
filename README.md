@@ -1,6 +1,6 @@
-# HFG website: test deployment
+# YHF website: test deployment
 
-These are the built files of the HFG website, published with GitHub Pages for testing at https://hfg.foo.ng.
+These are the built files of the YHF website, published with GitHub Pages for testing at https://hfg.foo.ng.
 
 The files are generated. Nothing is edited here: the site is built from its own source repository and copied in.
 
