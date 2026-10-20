@@ -9,8 +9,15 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
   Cross-Origin-Opener-Policy: same-origin
 
-# asset names are not content-hashed: a day's cache, then revalidation
-/assets/*
+# asset names are not content-hashed: a day's cache, then revalidation. One rule per folder: hosts
+# join a header that two matching rules both set, which would leave the fonts with two lifetimes.
+/assets/css/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/img/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /assets/fonts/*

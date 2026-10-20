@@ -25,13 +25,9 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plexmono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plexmono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/hfg.css">
 
-<link rel="modulepreload" href="assets/js/hfg/format.js">
-<link rel="modulepreload" href="assets/js/hfg/figures.js">
-<link rel="modulepreload" href="assets/js/hfg/kinematics.js">
-<link rel="modulepreload" href="assets/js/hfg/vec.js">
-<link rel="modulepreload" href="assets/js/hfg/vehicle.js">
 <meta name="robots" content="noindex">
 </head>
 <body>
@@ -84,7 +80,7 @@
         <a class="btn btn--primary" href="contact.html?interest=evaluation#enquiry">Ask about an evaluation licence <span class="arrow" aria-hidden="true">→</span></a>
         <a class="btn" href="engineering.html#traceability">See how a result is traced</a>
       </div>
-      <div class="page-hero__meta"><span class="chip">Windows desktop</span><span class="chip">Licence groups of 1 to 100 users</span><span class="chip">Priced by the year</span></div>
+      <div class="page-hero__meta"><span class="chip">Windows desktop</span><span class="chip">Licence groups of 1 to 100 users</span><span class="chip">Yearly or one-time payment</span></div>
       </div>
       <figure class="media page-hero__media"><picture><source type="image/webp" srcset="assets/img/app-iso-480.webp 480w, assets/img/app-iso-720.webp 720w, assets/img/app-iso.webp 876w" sizes="(min-width: 1001px) 42vw, 100vw"><img src="assets/img/app-iso.jpg" srcset="assets/img/app-iso-480.jpg 480w, assets/img/app-iso-720.jpg 720w, assets/img/app-iso.jpg 876w" sizes="(min-width: 1001px) 42vw, 100vw" width="876" height="352" alt="YHF 3-D viewport: the example F1000 vehicle solved as one car — four corners, pushrods, bell cranks, coilovers and anti-roll bars" fetchpriority="high"></picture><figcaption><span>The example vehicle, solved as one car</span><span class="label">YHF viewport</span></figcaption></figure>
     </div>
@@ -120,7 +116,7 @@
         </div>
         <p class="body">Raise or lower the front lower-wishbone inboard pivots. The mechanism is re-solved and every quantity below is recalculated — geometry, rates and the balance of the whole car.</p>
       </div>
-      <div class="stack" data-propagation style="--stack: 1.5rem">
+      <div class="stack" data-propagation data-modules="assets/js/hfg/format.js assets/js/hfg/figures.js assets/js/hfg/kinematics.js assets/js/hfg/vec.js assets/js/hfg/vehicle.js" style="--stack: 1.5rem">
         <div class="control" style="max-width: 36rem">
           <div class="control__head"><label class="label" for="prop-dz">Lower-wishbone inboard pivots, height</label><span class="num" data-p="dz" aria-hidden="true">0 mm</span></div>
           <input id="prop-dz" type="range" min="-12" max="12" step="1" value="0" aria-valuetext="0 mm, the design position" aria-describedby="prop-note">

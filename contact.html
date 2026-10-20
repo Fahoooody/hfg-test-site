@@ -25,6 +25,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plexmono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plexmono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/hfg.css">
 
 <link rel="modulepreload" href="assets/js/pages/contact-lib.js">
@@ -92,7 +93,7 @@
       </div>
       <div class="b">
         <div id="form-status" class="notice" role="status" tabindex="-1" hidden></div>
-        <form class="form" id="enquiry-form" action="mailto:enquiries@yhf.example" method="post" enctype="text/plain">
+        <form class="form" id="enquiry-form" method="post">
           <div class="field-row">
             <div class="field">
               <label for="f-name">Name<span class="req" aria-hidden="true">*</span></label>
@@ -133,8 +134,10 @@
           </div>
           <div class="hp-field" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="btn-row">
-            <button class="btn btn--primary" type="submit"><span data-label>Send enquiry</span> <span class="arrow" aria-hidden="true">→</span></button>
+            <!-- a send button only once contact.js runs: a form action of mailto: is an insecure form for browsers -->
+            <button class="btn btn--primary" type="button" data-submit><span data-label>Send enquiry</span> <span class="arrow" aria-hidden="true">→</span></button>
           </div>
+          <noscript><p class="small">This form needs JavaScript to open your email app. Write to <a href="mailto:enquiries@yhf.example">enquiries@yhf.example</a> instead.</p></noscript>
           <p class="small" id="send-note">We use your details only to reply to this enquiry.</p>
         </form>
       </div>
